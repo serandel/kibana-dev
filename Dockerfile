@@ -3,7 +3,7 @@ FROM mhart/alpine-node:4.3.0
 MAINTAINER Serandel <serandel@gmail.com>
 EXPOSE 5601
 
-RUN apk update && apk add git python make g++
+RUN apk update && apk add git python make g++ && rm -rf /var/cache/apk/*
 RUN git clone --branch v4.5.0 https://github.com/elastic/kibana.git kibana 
 
 WORKDIR /kibana
