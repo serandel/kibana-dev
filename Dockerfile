@@ -1,6 +1,7 @@
 # Node.js version for Kibana 4.5.0
 FROM mhart/alpine-node:4.3.0
 MAINTAINER Serandel <serandel@gmail.com>
+
 EXPOSE 5601
 
 RUN apk update && apk add git python make g++ && rm -rf /var/cache/apk/*
